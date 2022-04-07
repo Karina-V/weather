@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="header-h1">Weather</h1>
+
+        <div class="form-group">
+            <input id="search" type="text" placeholder="Lviv..." required>
+            <div class="error-message">Please provide a valid city.</div>
+        </div>
+
+        <button id="btn" type="button">Search</button>
+    </div>
+    <div class="main">
+        <div class="lds-roller" style="display:none;" id="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="response-error" class="form-group error">
+            <div class="error-message style-error">Error! Please provide a valid city!</div>
+        </div>
+        <div class="current">
+            <div class="info-block">
+                <p id="city">Львів</p>
+                <p id="description">Дощ</p>
+                <div id="icon" class="pad icon__02d"></div>
+                <p id="temp">15&deg</p>
+            </div>
+            <div class="table-block">
+                <table>
+                    <tr class="table-information">
+                      <th id="table-icon"><img  src="./img/temperatures.png" alt="temperature"></th>
+                      <th id="table-text">Feels like:</th>
+                      <th id="temperature-feels" class="table-resalt">15&deg</th>
+                    </tr>
+                    <tr  class="table-information">
+                        <th id="table-icon"><img src="./img/temperature-max-in.png"></th>
+                        <th id="table-text">Temperature max:</th>
+                        <th id="temperature-max" class="table-resalt">15&deg</th>
+                    </tr>
+                    <tr  class="table-information">
+                        <th id="table-icon"><img src="./img/temperature-max-in.png"></th>
+                        <th id="table-text">Temperature min:</th>
+                        <th id="temperature-min" class="table-resalt">15&deg</th>
+                    </tr>
+                  </table>   
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
